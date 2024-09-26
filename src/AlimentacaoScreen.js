@@ -27,20 +27,20 @@ const AlimentacaoScreen = () => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => playSound(require('../assets/sounds/arroz.mp3'))}  // Áudio de "arroz"
+          onPress={() => playSound(require('../assets/sounds/arroz.mp3'))}  // toca audio arroz
         >
           <Image
-            source={require('../assets/images/btn_arroz.png')}  // Imagem "arroz"
+            source={require('../assets/images/btn_arroz.png')}  // localiza imagem "arroz"
             style={styles.buttonImage}
           />
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => playSound(require('../assets/sounds/feijao.mp3'))}  // Áudio de "feijão"
+          onPress={() => playSound(require('../assets/sounds/feijao.mp3'))}  // toca audio feijao
         >
           <Image
-            source={require('../assets/images/btn_feijao.png')}  // Imagem "feijão"
+            source={require('../assets/images/btn_feijao.png')}  // localiza imagem feijao
             style={styles.buttonImage}
           />
         </TouchableOpacity>
@@ -52,7 +52,7 @@ const AlimentacaoScreen = () => {
 const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
-    resizeMode: 'cover', // Ajusta a imagem para cobrir a tela inteira
+    resizeMode: 'cover', // ajusta a imagem para cobrir a tela inteira
   },
   buttonContainer: {
     flexDirection: 'row',

@@ -27,20 +27,20 @@ const BebidasScreen = () => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => playSound(require('../assets/sounds/agua.mp3'))}  // Áudio de "água"
+          onPress={() => playSound(require('../assets/sounds/agua.mp3'))}  // localiza som agua
         >
           <Image
-            source={require('../assets/images/btn_agua.png')}  // Imagem "água"
+            source={require('../assets/images/btn_agua.png')}  // localiza imagem agua
             style={styles.buttonImage}
           />
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => playSound(require('../assets/sounds/suco.mp3'))}  // Áudio de "suco"
+          onPress={() => playSound(require('../assets/sounds/suco.mp3'))}  // mesma coisa que no de cima mas com suco
         >
           <Image
-            source={require('../assets/images/btn_suco.png')}  // Imagem "suco"
+            source={require('../assets/images/btn_suco.png')}  // se vc n sabe oq isso faz vc é burro
             style={styles.buttonImage}
           />
         </TouchableOpacity>
@@ -52,7 +52,7 @@ const BebidasScreen = () => {
 const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
-    resizeMode: 'cover', // Ajusta a imagem para cobrir a tela inteira
+    resizeMode: 'cover', // ajusa a imagem para cobrir a tela inteira
   },
   buttonContainer: {
     flexDirection: 'row',

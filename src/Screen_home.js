@@ -23,7 +23,7 @@ const ScreenHome = () => {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Bebidas')} // Navega para Bebidas
+          onPress={() => navigation.navigate('Bebidas')} // Navega para Bebs
         >
           <Image
             source={require('../assets/images/btn_bebidas.png')}
@@ -38,7 +38,7 @@ const ScreenHome = () => {
 const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
-    resizeMode: 'cover', // Ajusta a imagem para cobrir a tela inteira
+    resizeMode: 'cover', // ajusta a imagem para cobrir a tela inteira
   },
   buttonContainer: {
     flexDirection: 'row',

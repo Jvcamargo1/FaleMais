@@ -1,3 +1,4 @@
+//importa as dependencias do negocio
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import ScreenHome from '../src/Screen_home';
