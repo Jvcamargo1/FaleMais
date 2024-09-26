@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Image, Text } from 'react-native';
-import MainActivity from '../src/MainActivity';  // Caminho atualizado // Caminho ajustado para o MainActivity.js dentro de 'src'
+import MainActivity from '../src/MainActivity';  // Caminho ajustado para o Soundboard.js dentro de 'src'
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
       </View>
       <View style={styles.buttonContainer}>
         {/* Renderiza o Soundboard, que contém a lógica dos botões */}
-        <Soundboard />
+        <MainActivity />
       </View>
     </View>
   );
