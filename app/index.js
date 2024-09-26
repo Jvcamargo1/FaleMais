@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Image, Text } from 'react-native';
-import Soundboard from '../src/Soundboard';  // Caminho ajustado para o Soundboard.js dentro de 'src'
+import MainActivity from '../src/MainActivity';  // Caminho atualizado // Caminho ajustado para o MainActivity.js dentro de 'src'
 
 const App = () => {
   return (
