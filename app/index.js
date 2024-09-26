@@ -1,62 +1,19 @@
 import React from 'react';
-import { StyleSheet, View, Image, Text } from 'react-native';
-import MainActivity from '../src/MainActivity';  // Caminho ajustado para o MainActivity.js dentro de 'src'
+import { createStackNavigator } from '@react-navigation/stack';
+import ScreenHome from '../src/Screen_home';
+import AlimentacaoScreen from '../src/AlimentacaoScreen';
+import BebidasScreen from '../src/BebidasScreen';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Image 
-        source={require('../assets/images/background.png')} 
-        style={styles.backgroundImage} 
-        resizeMode="cover" 
-      />
-      <View style={styles.blueBar}>
-        <Text style={styles.title}>Fala+</Text>
-      </View>
-      <View style={styles.buttonContainer}>
-        {/* Renderiza o MainActivity, que contém a lógica dos botões */}
-        <MainActivity />
-      </View>
-    </View>
+    <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Home" component={ScreenHome} />
+      <Stack.Screen name="Alimentacao" component={AlimentacaoScreen} />
+      <Stack.Screen name="Bebidas" component={BebidasScreen} />
+    </Stack.Navigator>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-  },
-  backgroundImage: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    width: '100%',
-    height: '100%',
-  },
-  blueBar: {
-    width: '100%',
-    height: 80,
-    backgroundColor: '#add8e6',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    paddingLeft: 20,
-  },
-  title: {
-    fontSize: 32,
-    color: '#fff',
-    fontWeight: 'bold',
-    textAlign: 'left',
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    padding: 0,
-    marginTop: 20,
-  },
-});
 
 export default App;
