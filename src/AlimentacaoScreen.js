@@ -27,20 +27,20 @@ const AlimentacaoScreen = () => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => playSound(require('../assets/sounds/arroz.mp3'))}  // toca audio arroz
+          onPress={() => playSound(require('../assets/sounds/som_refeição_arroz.mp3'))}  // toca audio arroz
         >
           <Image
-            source={require('../assets/images/btn_arroz.png')}  // localiza imagem "arroz"
+            source={require('../assets/images/btn_refeição_arroz.png')}  // localiza imagem "arroz"
             style={styles.buttonImage}
           />
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => playSound(require('../assets/sounds/feijao.mp3'))}  // toca audio feijao
+          onPress={() => playSound(require('../assets/sounds/som_refeição_feijao.mp3'))}  // toca audio feijao
         >
           <Image
-            source={require('../assets/images/btn_feijao.png')}  // localiza imagem feijao
+            source={require('../assets/images/btn_refeição_feijao.png')}  // localiza imagem feijao
             style={styles.buttonImage}
           />
         </TouchableOpacity>

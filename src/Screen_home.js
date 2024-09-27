@@ -30,6 +30,16 @@ const ScreenHome = () => {
             style={styles.buttonImage}
           />
         </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Frutas')} // Navega para Bebs
+        >
+          <Image
+            source={require('../assets/images/btn_frutas.png')}
+            style={styles.buttonImage}
+          />
+        </TouchableOpacity>
       </View>
     </ImageBackground>
   );
