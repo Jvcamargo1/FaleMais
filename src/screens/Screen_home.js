@@ -1,54 +1,56 @@
 import React from 'react';
-import { View, TouchableOpacity, Image, StyleSheet, ImageBackground } from 'react-native';
+import { View, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import TopBar from '../../components/TopBar'; //importa topbar (tela home precisa de uma topbar propria)
 
 const ScreenHome = () => {
   const navigation = useNavigation();
 
   return (
-    <ImageBackground 
-      source={require('../assets/images/background.png')} 
-      style={styles.backgroundImage}
-    >
+    <View style={styles.container}>
+      <TopBar />
+      
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Alimentacao')} // Navega para Alimentação
+          onPress={() => navigation.navigate('Alimentacao')}
         >
           <Image
-            source={require('../assets/images/btn_refeicao.png')}
+            source={require('../../assets/images/btn_refeicao.png')}
             style={styles.buttonImage}
           />
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Bebidas')} // Navega para Bebs
+          onPress={() => navigation.navigate('Bebidas')}
         >
           <Image
-            source={require('../assets/images/btn_bebidas.png')}
+            source={require('../../assets/images/btn_bebidas.png')}
             style={styles.buttonImage}
           />
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Frutas')} // Navega para Bebs
+          onPress={() => navigation.navigate('Frutas')}
         >
           <Image
-            source={require('../assets/images/btn_frutas.png')}
+            source={require('../../assets/images/btn_frutas.png')}
             style={styles.buttonImage}
           />
         </TouchableOpacity>
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  backgroundImage: {
+  container: {
     flex: 1,
-    resizeMode: 'cover', // ajusta a imagem para cobrir a tela inteira
+    backgroundColor: '#ADD8E6',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   buttonContainer: {
     flexDirection: 'row',
