@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, TouchableOpacity, Image, StyleSheet, ImageBackground } from 'react-native';
 import { Audio } from 'expo-av';
 
-const AlimentacaoScreen = () => {
+const FrutasScreen = () => {
   const [sound, setSound] = useState();
 
   const playSound = async (soundFile) => {
@@ -157,4 +157,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AlimentacaoScreen;
+export default FrutasScreen;
