@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import TopBar from '../../components/TopBar'; //importa topbar (tela home precisa de uma topbar propria)
+import TopBar from '../../components/TopBar';
 
 const ScreenHome = () => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <TopBar />
+      <TopBar isHome={true} /> 
       
       <View style={styles.buttonContainer}>
         <TouchableOpacity

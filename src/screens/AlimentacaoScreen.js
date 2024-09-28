@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { View, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { playSound, unloadSound } from '../services/audioservice';
-import TopBar from '../../components/TopBar'; //importa topbar
+import TopBar from '../../components/TopBar';
 
 
 const AlimentacaoScreen = () => {
   useEffect(() => {
     return () => {
-      unloadSound();  // descarregar o som quando o componente for desmontado
+      unloadSound();
     };
   }, []);
 

@@ -28,13 +28,13 @@ const SplashScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ADD8E6', // Fundo azul claro padrao do background
+    backgroundColor: '#ADD8E6', 
     justifyContent: 'center',
     alignItems: 'center',
   },
   logo: {
-    width: 150,  // ajuste o tamanho da logo
-    height: 150, // ajuste co tamanho da logo
+    width: 150,  // ajusta o tamanho da logo
+    height: 150,
     resizeMode: 'contain', // garante a proporção da logo
   },
 });
