@@ -1,11 +1,18 @@
-// src/audioService.js
 import { Audio } from 'expo-av';
 
 let currentSound;
 
 export const playSound = async (soundFile) => {
   if (currentSound) {
-    await currentSound.unloadAsync();  // Descarta o áudio anterior para evitar sobreposição
+    const status = await currentSound.getStatusAsync();
+
+    // Verifica se o som está tocando
+    if (status.isPlaying) {
+      return; // Impede a reprodução se o som já estiver tocando
+    }
+
+    // Se o som não estiver tocando, descarrega o som anterior
+    await currentSound.unloadAsync();
   }
 
   const { sound } = await Audio.Sound.createAsync(soundFile);
